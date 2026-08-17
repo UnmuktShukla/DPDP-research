@@ -1,36 +1,104 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# DPDP Startup Research
 
-## Getting Started
+A Next.js research workspace for exploring India's Digital Personal Data Protection (DPDP) landscape — market intelligence, regulatory notes, competitive analysis, startup strategy, and evidence-backed research in one editable app.
 
-First, run the development server:
+**Disclaimer:** Content in this workspace is research scaffolding, not legal advice. DPDP notes are high-level public-structure reminders only. Confirm every legal claim against the Act, Rules, and qualified counsel before relying on it.
+
+## Features
+
+- **Executive overview** — thesis, business plan, and research progress at a glance
+- **Market research** — size, segments, pain points, demand signals, trends
+- **DPDP regulatory map** — Act, rules, compliance, consent, rights, SDF, penalties
+- **Competition** — profiles, comparison, pricing, positioning, gaps
+- **Startup planning** — problem/solution, product, GTM, moat, risks, roadmap
+- **Research OS** — sources, interviews, evidence, hypotheses, assumptions, log
+- **Strategy** — opportunities, options, decisions, experiments, next steps
+- **Local persistence** — edits saved to browser `localStorage` with seed reset
+- **Command palette** — `⌘K` / `Ctrl+K` to jump anywhere in the workspace
+
+## Tech stack
+
+- [Next.js 16](https://nextjs.org) (App Router)
+- React 19
+- TypeScript
+- Tailwind CSS 4
+- [shadcn/ui](https://ui.shadcn.com) + Radix UI
+
+## Getting started
+
+### Prerequisites
+
+- Node.js 20+
+- npm (or pnpm / yarn / bun)
+
+### Install and run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Production build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+### Lint
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run lint
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Environment variables
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Copy the example file and set your deployment URL for correct Open Graph / sitemap links:
 
-## Deploy on Vercel
+```bash
+cp .env.example .env.local
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+| Variable | Required | Description |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | No | Canonical site URL (e.g. `https://your-domain.com`). Falls back to `VERCEL_URL` on Vercel, then `http://localhost:3000`. |
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+No API keys or database are required — workspace data lives in seed JSON and browser storage.
+
+## Project structure
+
+```
+src/
+├── app/           # Routes (one page per research section)
+├── components/    # UI shell, editorial primitives, shadcn components
+├── data/          # Seed workspace content
+├── lib/           # Types, store, navigation, search, labels
+└── views/         # Page-level view components
+```
+
+## Deploy
+
+### Vercel (recommended)
+
+1. Push this repository to GitHub.
+2. Import the project in [Vercel](https://vercel.com/new).
+3. Set `NEXT_PUBLIC_SITE_URL` to your production domain.
+4. Deploy — no extra configuration needed.
+
+### Other hosts
+
+Any Node.js host that supports Next.js 16 can run `npm run build` and `npm start`.
+
+## Editing content
+
+- **In the UI:** Click editable fields to update thesis, notes, and research items. Changes persist locally in the browser.
+- **Seed data:** Edit `src/data/seed.ts` to change default content shipped with the app.
+- **Navigation:** Update `src/lib/nav.ts` to add or reorder sections.
+
+Use **Reset seed** in the top bar to discard local edits and restore defaults.
+
+## License
+
+Private research workspace. All rights reserved unless otherwise noted by the repository owner.
