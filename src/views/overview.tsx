@@ -17,7 +17,7 @@ import Link from "next/link"
 export function OverviewView() {
   const { workspace, updateThesis } = useWorkspace()
   const stats = deriveStats(workspace)
-  const claim = workspace.claims.find((item) => item.id === "cl-investment")
+  const claim = workspace.claims.find((item) => item.id === "cl-verdict")
 
   return (
     <Document>
@@ -42,7 +42,7 @@ export function OverviewView() {
 
       <Section
         title="Executive Thesis"
-        description="The shortest honest version of what we think — editable, still unvalidated."
+        description="Regulatory need established. Customer need increasingly evidenced. Commercial demand still unproven."
       >
         <div className="divide-y divide-border border-y border-border">
           {(

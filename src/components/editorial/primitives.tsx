@@ -126,9 +126,9 @@ export function Callout({ children }: { children: ReactNode }) {
 export function PlaceholderBanner() {
   return (
     <Callout>
-      <span className="font-medium text-foreground">Placeholder content.</span>{" "}
-      DPDP notes are high-level public-structure reminders, not legal advice,
-      not statute text, and not a compliance opinion.
+      <span className="font-medium text-foreground">Research workspace.</span>{" "}
+      Market and survey findings are cited to sources. DPDP regulatory notes are
+      not legal advice and not a compliance opinion.
     </Callout>
   )
 }

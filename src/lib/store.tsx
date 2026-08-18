@@ -11,7 +11,7 @@ import {
 import { seedWorkspace } from "@/data/seed"
 import type { Workspace } from "@/lib/types"
 
-const STORAGE_KEY = "dpdp-research-workspace-v1"
+const STORAGE_KEY = "dpdp-research-workspace-v2"
 
 type EntityArrayKey = {
   [K in keyof Workspace]: Workspace[K] extends unknown[] ? K : never
