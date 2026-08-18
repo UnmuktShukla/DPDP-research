@@ -91,9 +91,11 @@ export function CompetitiveLandscapeView() {
       </div>
       <Section title="Working picture">
         <p className="text-[15px] leading-7">
-          Three gravitational wells: global privacy/GRC suites, India legal-tech
-          templates, and Big-4 / law-firm programmes. Our concept is a DPDP-native
-          operations system — currently an empty column in the comparison matrix.
+          DPDP is already a real software and services category in India — global
+          enterprise suites, Indian enterprise platforms, mid-market SaaS, consent
+          tools, vertical products, and consulting/DPO services. Generic “DPDP
+          compliance platform” is not obvious whitespace. Our job is to find a
+          specific customer or workflow incumbents do not serve well.
         </p>
       </Section>
       <Section title="Players">

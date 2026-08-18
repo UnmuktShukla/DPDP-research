@@ -42,7 +42,7 @@ export function OverviewView() {
 
       <Section
         title="Executive Thesis"
-        description="Regulatory need established. Customer need increasingly evidenced. Commercial demand still unproven."
+        description="Thesis v0.1: regulatory trigger established; readiness gaps evidenced; commercial demand still unproven."
       >
         <div className="divide-y divide-border border-y border-border">
           {(
